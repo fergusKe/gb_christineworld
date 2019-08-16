@@ -1,0 +1,91 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#wrapper {
+	position: relative;
+}
+#bg {
+	position: relative;
+	margin-top: 0px;
+}
+#leftCont {
+	position: absolute;
+	z-index: 10;
+}
+#logo {
+	padding-top: 50px;
+}
+#nav {
+	margin: 80px 0 0 40px; 
+	display: inline-block;
+}
+
+.news {
+	width: 201px;
+	height: 50px;
+	background: url(../images/default/btn1-1.png) no-repeat;
+}
+.news:hover {
+	background: url(../images/default/btn1-2.png) no-repeat;
+}
+.brand {
+	width: 201px;
+	height: 50px;
+	background: url(../images/default/btn2-1.png) no-repeat;
+}
+.brand:hover {
+	background: url(../images/default/btn2-2.png) no-repeat;
+}
+.goods {
+	width: 201px;
+	height: 50px;
+	background: url(../images/default/btn3-1.png) no-repeat;
+}
+.goods:hover {
+	background: url(../images/default/btn3-2.png) no-repeat;
+}
+.technology {
+	width: 201px;
+	height: 50px;
+	background: url(../images/default/btn4-1.png) no-repeat;
+}
+.technology:hover {
+	background: url(../images/default/btn4-2.png) no-repeat;
+}
+.knowledge {
+	width: 201px;
+	height: 50px;
+	background: url(../images/default/btn5-1.png) no-repeat;
+}
+.knowledge:hover {
+	background: url(../images/default/btn5-2.png) no-repeat;
+}
+.contact {
+	width: 201px;
+	height: 50px;
+	background: url(../images/default/btn6-1.png) no-repeat;
+}
+.contact:hover {
+	background: url(../images/default/btn6-2.png) no-repeat;
+}
+/*=======================leftCont_end=======================*/
+
+
+
+#footer {
+	position: absolute;
+	text-align: center;
+	bottom: 0px;
+	width: 100%;
+	z-index: 10;
+	height: 39px;
+	background: rgba(255, 255, 255, .6);
+}
+#footer p {
+	display: inline-block;
+	font-size: 12px;
+	color: #595757;
+	margin-top: 12px;
+}

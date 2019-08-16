@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/news.css">
+    <title>全球</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="leftCont">
+            <div id="logo">
+                <a href="default.htm">
+                    <img src="images/default/logo.jpg">
+                </a>
+            </div>
+            <div id="nav">
+                <ul>
+                    <a href="news.htm"><li class="news"></li></a>
+                    <a href="brand.htm"><li class="brand"></li></a>
+                    <a href="goods.htm"><li class="goods"></li></a>
+                    <a href="technology.htm"><li class="technology"></li></a>
+                    <a href="knowledge.htm"><li class="knowledge"></li></a>
+                    <a href="contact.htm"><li class="contact"></li></a>
+                </ul>
+            </div>
+        </div>
+        <div id="bg">
+            <div id="rightCont">
+                <div id="containerBox">
+                    <div id="container">
+                        <ul>
+                            <li>
+                                <h2>克莉絲汀名床&nbsp;&nbsp;年中慶</h2>
+                                <p>CHRISTINE&nbsp;皇家飯店用床，年中大特價！</p>
+                                <p class="more">
+                                    <a href="news_p1.htm"><span>More</span></a>&nbsp;&nbsp;2014.08.25</p>
+                                <div class="detail">
+                                    <img src="images/new/new1.jpg" align="left" style="margin: 0 10px 10px 0;width:50%;">
+                                    <h3>皇家飯店用床，年中大特價！</h3>
+                                    <p style="margin-top: 20px;"><span>5尺x6.2尺</span></p>
+                                    <p style="margin-bottom: 20px;"><span>特價＄３９,９００元</span></p>
+                                    <p style="margin-bottom: 20px;"><span>贈:保潔墊一件 或 舒眠枕一對 二選一</span></p>
+                                    <h4>面布：天絲棉TENCELR</h4>
+                                    <p>尤加利樹提煉出來的，具有人造與天然纖維的優點，柔軟如絲綢，強韌如滌綸(聚酯)纖維，涼爽如麻，溫軟如羊毛，吸水性與棉相當，有效的減少細菌生長。</p>
+                                    <h4>三段式護背設計</h4>
+                                    <p>特別加強肩、腰、臀的支撐，使脊椎完全放鬆休息，減少腰痠背痛與降低脊椎病變的產生。</p>
+                                    <h4>直列式獨立筒</h4>
+                                    <p>以陣列式平行排列。獨立筒使用高碳錳鋼製造，以300度高溫支高壓電流一體成型，彈簧不易塌陷。</p>
+                                    <h4>採用歐洲最新科技3D網眼布</h4>
+                                    <p>最佳的睡眠環境：適合台灣海島型氣候，夏天睡覺透氣不悶熱。</p>
+                                    <p>最佳透氣性：具有絕佳的透氣性和透濕性，給你一個健康，舒爽的睡眠環境。</p>
+                                    <p>最佳的衛生度：具有抗過敏、防靜電、抗塵?、抗真菌而不含有害物質。</p>
+                                    <h4>邊框加強</h4>
+                                    <p>- 採用歐州最新懸吊系統設計，360度高密度泡棉封邊，保證床沿不下陷。</p>
+                                    <p>- 省錢：讓床墊的使用面積，百分之百完全使用到。</p>
+                                    <p>- 安全：床墊四周加強設計，側邊不易塌陷，睡眠時不易跌落床下。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <h2>內湖店&nbsp;即將開幕</h2>
+                                <p>全球家具&nbsp;內湖店:台北市內湖區內湖路一段155號 !!敬請期待!!</p>
+                                <p class="more">
+                                    <span>More</span>&nbsp;&nbsp;2014.08.25</p>
+                                <div class="detail">
+                                    
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <p>全球家具設計有限公司 版權所有&copy 2014 BNF Furniture CROUP. ALL RIGHTS RESERVED.</p>&nbsp;&nbsp;&nbsp;&nbsp;
+        <p>消費者服務專線：0800-555-865</p>
+    </div>
+</body>
+<script src="js/jquery.1.9.0.min.js"></script>
+<script>
+var win_W, win_H, bg_W, bg_H, rightCont_W;
+
+// $(window).load(function() {
+//     $('.more').click();
+// });
+
+
+$(window).resize(function() {
+    win_W = $(window).width();
+    win_H = $(window).height();
+    rightCont_W = $('#rightCont').width();
+    bg_H = Math.ceil(win_W / 1903 * 903); //依寬度算出照片高度
+    $('body').css(
+        'background-size', win_W
+    );
+    if (win_H > bg_H) {
+        bg_W = Math.ceil(win_H / 903 * 1903);
+        $('body').css(
+            'background-size', bg_W
+        );
+    }
+    if (win_W < 1270) {
+        $('#nav').css(
+            'margin-left', 0
+        );
+    }else {
+        $('#nav').css(
+            'margin-left', 40
+        );
+    }
+    if (win_W < 980) {
+        $('#containerBox').css(
+            'padding-left', 0
+        );
+        $('#container ul').css(
+            'margin-left', 30
+        );
+    }else {
+        $('#containerBox').css(
+            'padding-left', 50
+        );
+        $('#container ul').css(
+            'margin-left', 0
+        );
+    }
+    if (win_W < 880) {
+        $('#rightCont').css({
+            'left': '150px',
+            'right': '',
+            'width': '730px'
+        });
+        $('#container .titleBox').css(
+            'position', 'relative'
+        );
+        $('#container #intro').css(
+            'margin-left', 0
+        );
+        $('body').css(
+            'overflow-x', 'auto'
+        );
+        $('#footer').css(
+            'width', 880
+        );
+    } else {
+        $('#rightCont').css({
+            'left': '',
+            'right': '0px',
+            'width': '83%'
+        });
+        $('#container .titleBox').css(
+            'position', 'fixed'
+        );
+        $('#container #intro').css(
+            'margin-left', 230
+        );
+        $('body').css(
+            'overflow', 'hidden'
+        );
+        $('#footer').css(
+            'width', '100%'
+        );
+    }
+
+    if(win_H <= 830){
+        $('#containerBox').css(
+            'height', 350
+        );
+        $('#container').css(
+            'height', 350
+        );
+    }else{
+        $('#containerBox').css(
+            'height', 505
+        );
+        $('#container').css(
+            'height', 505
+        );
+    }
+    if(win_H <= 750){
+        $('#containerBox').css(
+            'margin-top', 120
+        );
+        $('#nav').css(
+            'margin-top', 20
+        );
+    }else{
+        $('#containerBox').css(
+            'margin-top', 180
+        );
+        $('#nav').css(
+            'margin-top', 80
+        );
+    }
+    
+    var footer_H = $('#footer').height();
+    $('#bgBar').css(
+        'bottom', footer_H
+    );
+}).resize();
+
+var click = 0;
+var clickRemainder;
+var moreIndex;
+// $('.more').click(function() {
+//     click++;
+//     clickRemainder = click % 2;
+//     moreIndex = $(this).parent().index();
+//     console.log('moreIndex=' + moreIndex);
+//     console.log('click=' + click);
+//     console.log('clickRemainder=' + clickRemainder);
+
+//     $('.detail h3', $('#container ul li').eq(moreIndex)).toggle('slow');
+//     $('.detail h4', $('#container ul li').eq(moreIndex)).toggle('slow');
+//     $('.detail p', $('#container ul li').eq(moreIndex)).toggle('slow');
+//     $('.detail img', $('#container ul li').eq(moreIndex)).toggle('slow');
+// });
+</script>
+
+</html>

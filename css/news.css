@@ -1,0 +1,176 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body {
+	overflow: hidden;
+	background: url(../images/default/bg1.jpg) no-repeat;
+	background-position: center 0; 
+}
+/*左側選單顯示目前所在頁面*/
+.news {
+	background: url(../images/default/btn1-2.png) no-repeat;
+}
+#rightCont {
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: inline-block;
+	/*margin: 100px 0 0 280px;*/
+	width: 83%;
+	/*background: #59C;*/
+}
+#containerBox {
+	position: relative;
+	width: 80%;
+	height: 505px;
+	margin: 180px auto 0;
+	background: rgba(240, 240, 240, .9);
+	box-shadow: 5px 5px 10px 3px rgba(0,0,0, .5);
+	border-radius: 10px;
+	padding: 50px 40px 50px 50px;
+}
+#containerBox #returnBtn {
+	position: absolute;
+	top: 15px;
+	right: 40px;
+	border: 1px solid #000;
+	padding: 3px;
+	cursor: pointer;
+	color: #000;
+}
+#containerBox #returnBtn:hover {
+	color: #555;
+	border: 1px solid #555;
+}
+#containerBox #returnBtn a {
+	text-decoration: none;
+}
+#container {
+	position: relative;
+	height: 505px;
+	font-family: '微軟正黑體', sans-serif;
+}
+#container ul {
+	margin: 0 20px 0 0;
+}
+#container ul li {
+	margin-top: 10px;
+	clear: both;
+}
+#container ul li:first-child {
+	margin: 0;
+}
+#container h2 {
+	font-size: 16px;
+	color:#c22c8f;
+}
+#container p {
+	line-height: 30px;
+}
+#container .more {
+	font-size: 13px;
+	line-height: 36px;
+}
+#container .more a {
+	text-decoration: none;
+}
+#container .more span {
+	position: relative;
+	font-size: 16px;
+	border: 1px solid #666;
+	background: #cb5f9d;
+	color: #FFF;
+	border-radius: 5px;
+	padding: 3px 5px;
+	top: -5px;
+	cursor: pointer;
+	/*padding-bottom: 3px;*/
+}
+#container .more span:hover {
+	background: #d278ac;
+}
+#container .detail {
+	float: right;
+	width: 49%;
+	/*height: 454px;*/
+	font-family: '微軟正黑體', sans-serif;
+	/*margin-top: 51px;*/
+	overflow-x: auto;
+	/*transition: 1s;*/
+}
+#container .detail h3 {
+	display: none;
+	font-size: 24px;
+	color: #c22c8f;
+	/*opacity: 0;*/
+}
+#container .detail h4 {
+	display: none;
+	color: #c22c8f;
+	margin-top: 10px;
+	/*opacity: 0;*/
+}
+#container .detail p {
+	display: none;
+	/*opacity: 0;*/
+}
+#container .detail p span {
+	font-size: 24px;
+}
+#container .detail img {
+	display: none;
+	border-radius: 10px;
+	width: 70%;
+	height: 70%;
+}
+
+
+/*子頁面使用*/
+#container .title {
+	position: fixed;
+	width: 31%;
+}
+#container img {
+	/*position: fixed;*/
+	position: relative;
+	border-radius: 10px;
+	width: 100%;
+	/*width: 30%;*/
+	/*height: 30%;*/
+	/*margin-top: 51px;*/
+	min-width: 400px;
+}
+#container .detail {
+	
+}
+@media screen and (max-width: 1255px) {
+	#container {
+		overflow-x: auto;
+	}
+	#container .title {
+		position: relative;
+		margin: 0 auto;
+		width: 50%;
+	}
+	#container .detail {
+		float: none;
+		margin: 0 auto;
+		overflow: visible;
+	}
+}
+@media screen and (max-width: 1024px) {
+	#container {
+		overflow-x: auto;
+	}
+	#container .title {
+		position: relative;
+		margin: 0;
+	}
+	#container .detail {
+		float: left;
+		width: 100%;
+		overflow: visible;
+	}
+}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/default.css">
+    <title>全球</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="bgImg show" style="background: url(images/default/bg1.jpg)"></div>
+        <div class="bgImg" style="background: url(images/default/bg2.jpg)"></div>
+        <div class="bgImg" style="background: url(images/default/bg3.jpg)"></div>
+        <div id="leftCont">
+            <div id="logo">
+                <a href="default.htm">
+                    <img src="images/default/logo.jpg">
+                </a>
+            </div>
+            <div id="nav">
+                <ul>
+                    <a href="news.htm"><li class="news"></li></a>
+                    <a href="brand.htm"><li class="brand"></li></a>
+                    <a href="goods.htm"><li class="goods"></li></a>
+                    <a href="technology.htm"><li class="technology"></li></a>
+                    <a href="knowledge.htm"><li class="knowledge"></li></a>
+                    <a href="contact.htm"><li class="contact"></li></a>
+                </ul>
+            </div>
+        </div>
+        <div id="bg">
+            <div id="rightCont">
+                <div class="img1">
+                    <img src="images/default/b_05.png">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="bgBar">
+        <img src="images/default/bgBar.png">
+        <div class="barCont">
+            <span class="Previous"></span>
+            <p><span class="ImgIndex"></span>&nbsp;/&nbsp;<span class="ImgCount"></span></p>
+            <span class="Next"></span>
+        </div>
+    </div>
+    <div id="footer">
+        <p>全球家具設計有限公司 版權所有&copy 2014 BNF Furniture CROUP. ALL RIGHTS RESERVED.</p>&nbsp;&nbsp;&nbsp;&nbsp;
+        <p>消費者服務專線：0800-555-865</p>
+    </div>
+</body>
+<script src="js/jquery.1.9.0.min.js"></script>
+<script>
+$(function(){
+    var win_W, win_H, bg_W, bg_H;
+    var bgImgCount = $('.bgImg').length;
+    var bgImgIndex = 0;
+
+    $(window).resize(function() {
+        win_W = $(window).width();
+        win_H = $(window).height();
+        // 利用wrapper的overflow確認img超過視窗範圍時不會產生空白區域
+        $('#wrapper').css({
+            'width': win_W + 'px',
+            'height': win_H + 'px'
+        });
+        // 由於寬高設定在style，因此background-position也必須一樣，設定在CSS沒有效果
+        $('.bgImg').css({
+            'width': win_W + 'px',
+            'height': win_H + 'px',
+            'background-position-x': 'center'
+        });
+        bg_H = Math.ceil(win_W / 1903 * 903); //依寬度算出照片高度
+        // $('.bgImg img').css({
+        //     'width': win_W + 'px'
+        // });
+        // if (win_H > bg_H) {
+        //     bg_W = Math.ceil(win_H / 903 * 1903);
+        //     $('.bgImg img').css(
+        //         'width', bg_W
+        //     );
+        // }
+        console.log('win_W='+win_W);
+        console.log('win_H='+win_H);
+        $('.bgImg').css(
+            'background-size', win_W
+        );
+        if (win_H > bg_H) {
+            bg_W = Math.ceil(win_H / 903 * 1903);
+            $('.bgImg').css(
+                'background-size', bg_W
+            );
+        }
+        if (win_W < 650) {
+            $('.img1').css(
+                'right', 0
+            );
+        } else {
+            $('.img1').css(
+                'right', 100
+            );
+        }
+        if (win_W < 1270) {
+            $('#nav').css(
+                'margin-left', 0
+            );
+        }else {
+            $('#nav').css(
+                'margin-left', 40
+            );
+        }
+        
+        if(win_H <= 750){
+        $('#containerBox').css(
+            'margin-top', 120
+        );
+        $('#nav').css(
+            'margin-top', 20
+        );
+        $('.img1 img').css(
+            'width', 350
+        );
+    }else{
+        $('#containerBox').css(
+            'margin-top', 180
+        );
+        $('#nav').css(
+            'margin-top', 80
+        );
+        $('.img1 img').css(
+            'width', 450
+        );
+    }
+        
+        // var footer_H = $('#footer').height();
+        // $('#bgBar').css(
+        //     'bottom', footer_H
+        // );
+    }).resize();
+
+    // 顯示目前為第幾張背景
+    $('.ImgCount').text(bgImgCount);
+    $('.ImgIndex').text(1);
+    
+
+    $('.Next').click(function(){
+
+        clearInterval(bgImgPlay);
+        clearTimeout(bgImgDelay);
+
+        bgImgIndex ++;
+        if(bgImgIndex == bgImgCount) {
+            bgImgIndex = 0;
+        }
+
+        $('.bgImg').each(function(){
+            $('.bgImg').removeClass('show');
+        });
+       $('.bgImg').eq(bgImgIndex).addClass('show');
+       $('.ImgIndex').text(bgImgIndex+1);
+       console.log('bgImgIndex='+bgImgIndex);
+
+       //點擊後過一段時間再自動撥放
+        var bgImgDelay;
+
+        bgImgDelay = setTimeout(function() {
+         clearInterval(bgImgPlay);
+        clearTimeout(bgImgDelay);
+            bgImgPlay = setInterval(bgImgGo, 5000);
+        }, 5000);
+    });
+    $('.Previous').click(function(){
+        clearInterval(bgImgPlay);
+        clearTimeout(bgImgDelay);
+
+        bgImgIndex --;
+        if(bgImgIndex < 0) {
+            bgImgIndex = bgImgCount-1;
+        }
+
+        $('.bgImg').each(function(){
+            $('.bgImg').removeClass('show');
+        });
+       $('.bgImg').eq(bgImgIndex).addClass('show');
+       $('.ImgIndex').text(bgImgIndex+1);
+       console.log('bgImgIndex='+bgImgIndex);
+
+       //點擊後過一段時間再自動撥放
+        var bgImgDelay;
+
+        bgImgDelay = setTimeout(function() {
+         clearInterval(bgImgPlay);
+        clearTimeout(bgImgDelay);
+            bgImgPlay = setInterval(bgImgGo, 5000);
+        }, 5000);
+    });
+
+    // 自動撥放背景圖
+    var bgImgPlay = setInterval(bgImgGo, 5000);
+
+    function bgImgGo() {
+        bgImgIndex ++;
+        if(bgImgIndex == bgImgCount) {
+            bgImgIndex = 0;
+        }
+
+        $('.bgImg').each(function(){
+            $('.bgImg').removeClass('show');
+        });
+       $('.bgImg').eq(bgImgIndex).addClass('show');
+       $('.ImgIndex').text(bgImgIndex+1);
+       console.log('bgImgIndex='+bgImgIndex);
+    }
+})
+
+
+
+</script>
+
+</html>

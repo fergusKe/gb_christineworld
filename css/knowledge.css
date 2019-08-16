@@ -1,0 +1,130 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body {
+	overflow: hidden;
+	background: url(../images/default/bg1.jpg) no-repeat;
+	background-position: center 0; 
+}
+/*左側選單顯示目前所在頁面*/
+.knowledge {
+	background: url(../images/default/btn5-2.png) no-repeat;
+}
+#rightCont {
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: inline-block;
+	/*margin: 100px 0 0 280px;*/
+	width: 83%;
+	/*background: #59C;*/
+}
+#containerBox {
+	position: relative;
+	width: 70%;
+	height: 435px;
+	margin: 180px auto 0;
+	background: rgba(240, 240, 240, .9);
+	box-shadow: 5px 5px 10px 3px rgba(0,0,0, .5);
+	border-radius: 10px;
+	padding: 50px 40px 50px 50px;
+}
+#container {
+	position: relative;
+	height: 435px;
+	font-family: '微軟正黑體', sans-serif;
+	overflow-x: auto;
+	overflow-y: auto;
+	padding-right: 20px;
+}
+#container .titleBox {
+	position: fixed;
+	float: left;
+    width: 230px;
+    height: 550px;
+    text-align: center;
+}
+#container #title {
+	/*float: left;*/
+	/*display: inline-block;*/
+	position: relative;
+	width: 100%;
+	height: 600px;
+	display:table-cell; 
+    /*vertical-align:middle;*/
+    padding: 0 0 0 21px;
+}
+
+#container #title ul {
+	/*width: 100%;*/
+	/*height: 600px;*/
+	/*position: relative;*/
+	/*display:table-cell; */
+}
+#container #title ul li {
+	margin-top: 15px;
+	font-size: 19px;
+	color: #666;
+	text-align: left;
+	cursor: pointer;
+	padding: 5px 8px;
+}
+#container #title ul li:first-child {
+	margin: 0;
+}
+#container #title ul li:hover {
+	color: #C22D92;
+	border: 1px dashed #C22D92;
+}
+#container #intro {
+	float: left;
+	width: 73%;
+	/*height: 600px;*/
+	margin-left: 230px;
+}
+#container #intro .photoTop {
+	width: 370px;
+}
+#container #intro > ul > li {
+	display: none;
+	background: rgba(245, 233, 167, .5);
+	border: 2px solid #898989;
+	margin-top: -4px;
+	padding: 70px 40px;
+}
+#container #intro > ul > li p {
+	font-family: '微軟正黑體', sans-serif;
+	/*font-weight: 700;*/
+	font-size: 22px;
+	line-height: 32px;
+}
+#container #intro > ul > li:nth-child(1) {
+	display: block;
+}
+#container #title > ul > li.active {
+	color: #C22D92;
+	border: 1px dashed #C22D92;
+}
+
+
+/*@media screen and (max-width: 1000px) {
+	.photoTop {
+		width: 250px;
+	}
+}*/
+@media screen and (max-width: 1024px) {
+	#container #intro .photoTop {
+		width: 250px;
+	}
+}
+@media screen and (max-width: 1280px) {
+	#container #intro > ul > li p {
+		font-size: 17px;
+		line-height: 29px;
+	}
+	#container #intro > ul > li {
+		padding: 20px 20px;
+	}
+}

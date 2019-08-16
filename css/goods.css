@@ -1,0 +1,302 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+}
+body {
+	overflow: hidden;
+	background: url(../images/default/bg1.jpg) no-repeat;
+	background-position: center 0; 
+}
+/*左側選單顯示目前所在頁面*/
+.goods {
+	background: url(../images/default/btn3-2.png) no-repeat;
+}
+
+#rightCont {
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: inline-block;
+	/*margin: 100px 0 0 280px;*/
+	width: 83%;
+	/*background: #59C;*/
+}
+#containerBox {
+	position: relative;
+	width: 80%;
+	height: 505px;
+	margin: 180px auto 0;
+	background: rgba(240, 240, 240, .9);
+	box-shadow: 5px 5px 10px 3px rgba(0,0,0, .5);
+	border-radius: 10px;
+	padding: 50px 40px 50px 50px;
+}
+#container {
+	position: relative;
+	height: 505px;
+	font-family: '微軟正黑體', sans-serif;
+	/*overflow-x: auto;*/
+	/*overflow-y: auto;*/
+	padding-right: 20px;
+}
+/*#container ul {
+	margin: 0 20px 0 0;
+}*/
+#container .titleBox {
+	position: fixed;
+	float: left;
+	/*display:table-cell; */
+    /*vertical-align:middle;*/
+    /*width: 18%;*/
+    width: 230px;
+    height: 600px;
+    text-align: center;
+    margin-left: -50px;
+}
+#container #title {
+	/*float: left;*/
+	/*display: inline-block;*/
+	position: relative;
+	width: 100%;
+	height: 600px;
+	display:table-cell; 
+    /*vertical-align:middle;*/
+    /*padding: 0 0 0 21px;*/
+}
+
+#container #title ul {
+	/*width: 100%;*/
+	/*height: 600px;*/
+	/*position: relative;*/
+	/*display:table-cell; */
+}
+#container #title ul li {
+	margin-top: 15px;
+	/*font-size: 19px;*/
+	/*color: #666;*/
+	/*text-align: left;*/
+	cursor: pointer;
+	/*padding: 5px 8px;*/
+	width: 96px;
+	height: 37px;
+}
+#container #title .nav1 {
+	background: url(../images/goods/nav/nav1_1.png) no-repeat;
+}
+#container #title .nav1:hover {
+	background: url(../images/goods/nav/nav1_2.png) no-repeat;
+}
+#container #title .nav2 {
+	background: url(../images/goods/nav/nav2_1.png) no-repeat;
+}
+#container #title .nav2:hover {
+	background: url(../images/goods/nav/nav2_2.png) no-repeat;
+}
+#container #title .nav3 {
+	background: url(../images/goods/nav/nav3_1.png) no-repeat;
+}
+#container #title .nav3:hover {
+	background: url(../images/goods/nav/nav3_2.png) no-repeat;
+}
+#container #title .nav4 {
+	background: url(../images/goods/nav/nav4_1.png) no-repeat;
+}
+#container #title .nav4:hover {
+	background: url(../images/goods/nav/nav4_2.png) no-repeat;
+}
+#container #title .nav5 {
+	background: url(../images/goods/nav/nav5_1.png) no-repeat;
+}
+#container #title .nav5:hover {
+	background: url(../images/goods/nav/nav5_2.png) no-repeat;
+}
+#container #title .nav6 {
+	background: url(../images/goods/nav/nav6_1.png) no-repeat;
+}
+#container #title .nav6:hover {
+	background: url(../images/goods/nav/nav6_2.png) no-repeat;
+}
+#container #title .nav7 {
+	background: url(../images/goods/nav/nav7_1.png) no-repeat;
+}
+#container #title .nav7:hover {
+	background: url(../images/goods/nav/nav7_2.png) no-repeat;
+}
+#container #title .nav8 {
+	background: url(../images/goods/nav/nav8_1.png) no-repeat;
+}
+#container #title .nav8:hover {
+	background: url(../images/goods/nav/nav8_2.png) no-repeat;
+}
+#container #title .nav9 {
+	background: url(../images/goods/nav/nav9_1.png) no-repeat;
+}
+#container #title .nav9:hover {
+	background: url(../images/goods/nav/nav9_2.png) no-repeat;
+}
+#container #title ul li:first-child {
+	/*margin: 0;*/
+}
+#container #title ul li:hover {
+	/*color: #C22D92;*/
+	/*border: 1px dashed #C22D92;*/
+}
+#container #intro {
+	position: relative;
+	float: left;
+	width: 93%;
+	height: 600px;
+	margin-left: 100px;
+}
+
+#container #intro > ul > li {
+	display: none;
+}
+#container #intro > ul > li:nth-child(1) {
+	display: block;
+}
+/*#container #title > ul > li.active {
+	color: #C22D92;
+	border: 1px dashed #C22D92;
+}*/
+#container #intro > ul > li h3 {
+	/*line-height: 30px;*/
+}
+#container #intro > ul > li p {
+	/*line-height: 25px;
+	margin-left: 14px;*/
+}
+
+/*=============================================*/
+#container .detail {
+	float: right;
+	width: 51%;
+	height: 443px;
+	font-family: '微軟正黑體', sans-serif;
+	margin-top: 51px;
+	overflow-x: auto;
+	padding-right: 15px;
+}
+/*#container .detail ul:nth-of-type {
+	list-style-type: square;
+}*/
+
+#container .detail h3 {
+	/*display: none;*/
+	font-size: 24px;
+	color: #c22c8f;
+}
+#container .detail h4 {
+	/*display: none;*/
+	color: #c22c8f;
+	margin-top: 10px;
+}
+#container .detail h4:before{
+    content: "•";
+    margin-right: 9px;
+    font-weight: bold;
+    color: #c22c8f;
+}
+#container .detail p {
+	line-height: 25px;
+	margin-left: 14px;
+	/*display: none;*/
+}
+#container .detail p span {
+	font-size: 24px;
+}
+#container .detail img {
+	/*display: none;*/
+	border-radius: 10px;
+	width: 70%;
+	height: 70%;
+}
+
+
+/*子頁面使用*/
+#container .pic {
+	position: fixed;
+	width: 28%;
+	text-align: center;
+}
+#container .pic img {
+	position: relative;
+	/*border-radius: 10px;*/
+	width: 100%;
+	min-width: 400px;
+}
+#container .pic .size {
+	margin-top: 12px;
+	width: 373px;
+	height: 24px; 
+}
+
+
+
+@media screen and (max-width: 1024px) {
+	#container #intro #area1 {
+		width: 100%;
+	}
+	#container #intro #area2 {
+		float: none;
+		width: 100%;
+	}
+	#container #intro #area3 {
+		width: 100%;
+	}
+	#container #intro #area6 {
+		width: 100%;
+	}
+	#container #intro .area7 {
+		width: 100%;
+	}
+	#container #intro .photo1_2 {
+		float: none;
+		min-width: 350px;
+	}
+	#container #intro .photo1_3 {
+		float: none;
+		min-width: 300px;
+	}
+	#container #intro .photo2_5 {
+		float: none;
+		min-width: 350px;
+	}
+	#container #intro .photo3_2 {
+		margin-top: 0;
+		min-width: 350px;
+	}
+	#container #intro .photo4_1 {
+		min-width: 350px;
+	}
+	#container #intro .photo4_2 {
+		float: none;
+		margin: 0;
+		width: 260px;
+	}
+	#container #intro .photo5_2 {
+		float: none;
+		min-width: 250px;
+	}
+	#container #intro .photo5_4 {
+		float: none;
+		min-width: 350px;
+		margin-top: 0px;
+	}
+	#container #intro .photo6_3{
+		float: none;
+		min-width: 350px;
+	}
+	#container #intro .photo6_4{
+		float: none;
+		min-width: 250px;
+		top: 0;
+	}
+	#container #intro .photo6_5{
+		float: none;
+		min-width: 250px;
+		top: 0;
+	}
+}

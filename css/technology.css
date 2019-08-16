@@ -1,0 +1,255 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body {
+	overflow: hidden;
+	background: url(../images/default/bg1.jpg) no-repeat;
+	background-position: center 0; 
+}
+/*左側選單顯示目前所在頁面*/
+.technology {
+	background: url(../images/default/btn4-2.png) no-repeat;
+}
+
+#rightCont {
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: inline-block;
+	/*margin: 100px 0 0 280px;*/
+	width: 83%;
+	/*background: #59C;*/
+}
+#containerBox {
+	position: relative;
+	width: 80%;
+	height: 505px;
+	margin: 180px auto 0;
+	background: rgba(240, 240, 240, .9);
+	box-shadow: 5px 5px 10px 3px rgba(0,0,0, .5);
+	border-radius: 10px;
+	padding: 50px 40px 50px 50px;
+}
+#container {
+	position: relative;
+	height: 505px;
+	font-family: '微軟正黑體', sans-serif;
+	overflow-x: auto;
+	overflow-y: auto;
+	padding-right: 20px;
+}
+/*#container ul {
+	margin: 0 20px 0 0;
+}*/
+#container .titleBox {
+	position: fixed;
+	float: left;
+	/*display:table-cell; */
+    /*vertical-align:middle;*/
+    /*width: 18%;*/
+    width: 230px;
+    height: 600px;
+    text-align: center;
+}
+#container #title {
+	/*float: left;*/
+	/*display: inline-block;*/
+	position: relative;
+	width: 100%;
+	height: 600px;
+	display:table-cell; 
+    /*vertical-align:middle;*/
+    padding: 0 0 0 21px;
+}
+
+#container #title ul {
+	/*width: 100%;*/
+	/*height: 600px;*/
+	/*position: relative;*/
+	/*display:table-cell; */
+}
+#container #title ul li {
+	margin-top: 15px;
+	font-size: 19px;
+	color: #666;
+	text-align: left;
+	cursor: pointer;
+	padding: 5px 8px;
+}
+#container #title ul li:first-child {
+	margin: 0;
+}
+#container #title ul li:hover {
+	color: #C22D92;
+	border: 1px dashed #C22D92;
+}
+#container #intro {
+	position: relative;
+	float: left;
+	width: 73%;
+	height: 600px;
+	margin-left: 230px;
+}
+#container #intro #area1 {
+	width: 48%;
+	float: left;
+	margin-right: 20px
+}
+#container #intro #area2 {
+	width: 45%;
+	float: left;
+}
+#container #intro #area3 {
+	width: 50%;
+}
+#container #intro #area6 {
+	width: 60%;
+}
+#container #intro .area7 {
+	width: 45%;
+}
+#container #intro .photo1_2 {
+	float: right;
+	width: 54%;
+}
+#container #intro .photo1_3 {
+	float: right;
+	width: 34%;
+	clear: both;
+}
+#container #intro .photo2_5 {
+	float: right;
+	margin-top: 52px; 
+	width: 63%;
+}
+#container #intro .photo3_2 {
+	width: 40%;
+	margin-top: -100px;
+	min-width: 180px;
+}
+#container #intro .photo4_1 {
+	width:60%;
+}
+#container #intro .photo4_2 {
+	float: right;
+	width: 21%;
+	margin: -110px 20% 30px 0;
+}
+#container #intro .photo5_2 {
+	float: right;
+	width: 22%;
+}
+#container #intro .photo5_4 {
+	float: right;
+	width: 54%;
+	margin-top: 40px;
+}
+#container #intro .photo6_3 {
+	float: right;
+	width: 36%;
+}
+#container #intro .photo6_4 {
+	float: right;
+	position: relative;
+	top: -80px;
+	width: 21%; 
+	margin-right: 10%;
+	min-width: 150px;
+}
+#container #intro .photo6_5 {
+	float: right;
+	position: relative;
+	top: -70px;
+	width: 21%; 
+	margin-right: 10%;
+	min-width: 150px;
+	clear: both;
+}
+#container #intro > ul > li {
+	display: none;
+}
+#container #intro > ul > li:nth-child(1) {
+	display: block;
+}
+#container #title > ul > li.active {
+	color: #C22D92;
+	border: 1px dashed #C22D92;
+}
+#container #intro > ul > li h3 {
+	line-height: 30px;
+}
+#container #intro > ul > li p {
+	line-height: 25px;
+}
+#container #intro > ul > li img {
+	/*width: 100%;*/
+
+}
+
+@media screen and (max-width: 1024px) {
+	#container #intro #area1 {
+		width: 100%;
+	}
+	#container #intro #area2 {
+		float: none;
+		width: 100%;
+	}
+	#container #intro #area3 {
+		width: 100%;
+	}
+	#container #intro #area6 {
+		width: 100%;
+	}
+	#container #intro .area7 {
+		width: 100%;
+	}
+	#container #intro .photo1_2 {
+		float: none;
+		min-width: 350px;
+	}
+	#container #intro .photo1_3 {
+		float: none;
+		min-width: 300px;
+	}
+	#container #intro .photo2_5 {
+		float: none;
+		min-width: 350px;
+	}
+	#container #intro .photo3_2 {
+		margin-top: 0;
+		min-width: 350px;
+	}
+	#container #intro .photo4_1 {
+		min-width: 350px;
+	}
+	#container #intro .photo4_2 {
+		float: none;
+		margin: 0;
+		width: 260px;
+	}
+	#container #intro .photo5_2 {
+		float: none;
+		min-width: 250px;
+	}
+	#container #intro .photo5_4 {
+		float: none;
+		min-width: 350px;
+		margin-top: 0px;
+	}
+	#container #intro .photo6_3{
+		float: none;
+		min-width: 350px;
+	}
+	#container #intro .photo6_4{
+		float: none;
+		min-width: 250px;
+		top: 0;
+	}
+	#container #intro .photo6_5{
+		float: none;
+		min-width: 250px;
+		top: 0;
+	}
+}

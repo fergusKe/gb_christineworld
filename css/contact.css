@@ -1,0 +1,66 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body {
+	overflow: hidden;
+	background: url(../images/default/bg1.jpg) no-repeat;
+	background-position: center 0; 
+}
+/*左側選單顯示目前所在頁面*/
+.contact {
+	background: url(../images/default/btn6-2.png) no-repeat;
+}
+
+#rightCont {
+	position: absolute;
+	right: 10px;
+	top: 0;
+	display: inline-block;
+	/*margin: 100px 0 0 280px;*/
+	width: 83%;
+	/*background: #59C;*/
+}
+#containerBox {
+	position: relative;
+	width: 59%;
+	height: 410px;
+	margin: 180px auto 0;
+	background: rgba(240, 240, 240, .9);
+	box-shadow: 5px 5px 10px 3px rgba(0,0,0, .5);
+	border-radius: 10px;
+	padding: 50px 40px 50px 50px;
+}
+#container {
+	position: relative;
+	height: 410px;
+	font-family: '微軟正黑體', sans-serif;
+	overflow-x: auto;
+	width: 440px;
+	margin: 0 auto;
+	/*margin-left: 16%;*/
+}
+.notice {
+	color:#c22c8f;
+	font-weight: 700;
+}
+#table1 {
+	margin-top: 50px;
+}
+#check p {
+	display: inline-block;
+	margin: 10px 0px 0 88px;
+}
+@media screen and (min-width: 1310px) {
+	#check {
+		position: absolute;
+		top: 252px;
+		left: 320px;
+	}
+	#container {
+		width: 695px;
+		margin: 45px auto 0;
+	}
+    
+}
